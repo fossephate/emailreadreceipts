@@ -2,7 +2,7 @@ body {
 	/* 	font: 13px Helvetica, Arial; */
 	font-family: "Roboto", sans-serif !important;
 	margin: 0;
-	padding: 0;
+	padding: 1%;
 	/* 	overflow: hidden; */
 	width: 100%;
 	height: 100%;
@@ -112,6 +112,185 @@ html, body {
 
 .settingsPanel {
 	width: 24%;
+	/* 	flex-grow: 1; */
+	/* padding: 5px !important; */
+	/* border: 1.2px solid #333; */
+	/* border-radius: 4px; */
+}
+
+.laglessSettings {}
+
+#lagless2Settings {
+	margin-top: 10px;
+}
+
+#lagless3Settings {
+	margin-top: 10px;
+}
+
+
+#settingsLabel {
+	margin-bottom: 10px;
+}
+
+/* JOYSTICKS */
+
+#jButtons {
+	position: relative;
+	border: solid 1px #aaa;
+	display: inline-block;
+	width: 100%;
+	border-radius: 10px;
+	height: 50px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.jButton {
+	display: inline-block;
+	background: #ccc;
+	color: black;
+	height: 50px;
+	width: 33%;
+	margin: 0;
+	margin-right: -3px;
+	text-align: center;
+	line-height: 45px;
+	font-size: 25px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.jButton:hover {
+	background: #eee;
+}
+
+.jButton:active {
+	background: #ddd;
+}
+
+.jButton.active {
+	color: white;
+	background: #888;
+}
+
+.jButton:nth-child(2) {
+	width: 34%;
+	border-left: solid 1px #aaa;
+	border-right: solid 1px #aaa;
+}
+
+.highlight {
+	display: none;
+}
+
+.highlight.active {
+	display: block;
+}
+
+.zone {
+	/*   display: none; */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+
+.zone.active {
+	display: block;
+}
+
+.zone>h1 {
+	/* 	position: absolute; */
+	position: relative;
+	padding: 10px 10px;
+	margin: 0;
+	color: white;
+	right: 0;
+	bottom: 0;
+}
+
+.zone.dynamic {
+	background: rgba(0, 0, 255, 0.1);
+}
+
+/* .highlighted: {
+	background: "rgba(255, 255, 50, 0.2)";
+} */
+
+
+/* Dark Theme */
+
+.light {
+	background-color: #efeef1 !important;
+	color: #000000 !important;
+}
+
+.otborder {
+	border: 1.2px solid #333;
+	border-radius: 4px;
+}
+
+.otborder-dark {
+	border: 1.2px solid #ccc;
+	border-radius: 4px;
+}
+
+.dark {
+	/* 	background-color: #212121 !important; */
+	background-color: #0e0c13 !important;
+	color: #ffffff !important;
+	/* 	text-shadow: 2px 2px #212121; */
+}
+
+/* GENERIC SLIDER */
+
+.mysliderContainer {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 50px;
+	/* 	padding-top: 24px; */
+}
+
+.mysliderContainer i {
+	/* 	margin-top: -6px; */
+	color: #666;
+}
+
+.myslider {
+	height: 5px;
+	width: 80%;
+	position: relative;
+	background: #555;
+	border-radius: 15px;
+	align-self: center;
+}
+
+.myslider .ui-slider-range-min {
+	height: 5px;
+	background: #2ecc71;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+}
+
+.myslider .ui-slider-handle {
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background: #FFF;
+	position: absolute;
+	margin-left: -10px;
+	margin-top: -12px;
+	cursor: pointer;
+	outline: none;
 }
 
 /* MISC */

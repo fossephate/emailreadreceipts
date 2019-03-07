@@ -1,7 +1,7 @@
 {
-  "name": "twitchplays",
+  "name": "readdit",
   "version": "1.0.0",
-  "description": "https://twitchplaysnintendoswitch.com",
+  "description": "https://tbd.io",
   "main": "server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,30 +9,28 @@
     "watch:dev": "webpack --env dev --progress --watch --config webpack.dev.js",
     "build:prod": "webpack --progress --config webpack.prod.js",
     "watch:prod": "webpack --env prod --progress --watch --config webpack.prod.js",
-    "prestart": "./prestart.sh",
-    "start": "./start.sh 2>&1 | tee -a ./server/log.txt",
-    "poststop": "./poststop.sh"
+    "start": "./start.sh 2>&1 | tee -a ./server/log.txt"
   },
   "sideEffects": [
     "*.css"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mfosse/twitchplays.git"
+    "url": "git+https://github.com/mfosse/readdit.git"
   },
   "author": "",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/mfosse/twitchplays/issues"
+    "url": "https://github.com/mfosse/readdit/issues"
   },
-  "homepage": "https://github.com/mfosse/twitchplays#readme",
+  "homepage": "https://github.com/mfosse/readdit#readme",
   "dependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/plugin-proposal-decorators": "^7.3.0",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@jukben/emoji-search": "^1.1.7",
     "@material-ui/core": "^3.9.2",
@@ -40,10 +38,12 @@
     "@material-ui/lab": "^3.0.0-alpha.30",
     "@snex/react-connect": "^0.3.0",
     "@webscopeio/react-textarea-autocomplete": "^3.0.1",
-    "babel-loader": "^8.0.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
     "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-env": "^1.7.0",
     "bcrypt": "^3.0.1",
     "bootstrap": "^4.1.3",
     "classnames": "^2.2.6",
@@ -62,6 +62,7 @@
     "mongodb": "^3.1.13",
     "mongoose": "^5.4.9",
     "nipplejs": "^0.7.1",
+    "nodemailer": "^5.1.1",
     "noty": "^3.2.0-beta",
     "passport": "^0.4.0",
     "passport-discord": "^0.1.3",
@@ -95,10 +96,13 @@
     "socket.io": "^2.1.1",
     "style-loader": "^0.23.1",
     "sweetalert2": "^7.28.5",
+    "tail": "^2.0.2",
     "timesync": "^1.0.3",
     "webpack": "^4.29.1",
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.1.4"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "webpack-cli": "^3.2.3"
+  }
 }
