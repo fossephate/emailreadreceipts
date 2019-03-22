@@ -58,7 +58,7 @@ const store = createStore(
 );
 
 let socket = io("https://emailreadreceipts.com", {
-	path: "/8100/socket.io",
+	path: "/8200/socket.io",
 	transports: ["websocket"],
 });
 

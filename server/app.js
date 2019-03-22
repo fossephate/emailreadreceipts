@@ -6,7 +6,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
-const port = 8100;
+const port = 8200;
 
 const Tail = require("tail").Tail;
 
@@ -59,7 +59,7 @@ io.on("connection", (socket) => {
 
 	socket.on("createReadReceipt", (data) => {
 		let token = crypto.randomBytes(64).toString("hex");
-		let src = "34.73.16.27/" + token + ".png";
+		let src = "emailreadreceipts.com/" + token + ".png";
 		socket.emit("readReceipt", src);
 		// tokenToOptions[token] = socket.id;
 		tokenToOptions[token] = {email: data.email, count: 0};
@@ -105,7 +105,7 @@ let mailOptions = {
 
 
 
-let tail = new Tail("/srv/www/tbd.io/logs/access.log");
+let tail = new Tail("/srv/www/emailreadreceipts.com/logs/access.log");
 
 tail.on("line", (data) => {
 
